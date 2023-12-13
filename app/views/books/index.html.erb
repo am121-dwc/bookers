@@ -1,4 +1,8 @@
 <h1>Books</h1>
 
-<%= @books.each do |book| %>
-  <p>
+<% @books.each do |book| %>
+  <p>Title</p>
+  <span><%= link_to book.title, book_path(book) %></span>
+  <span><%= book.body %></span>
+
+<% end %>
