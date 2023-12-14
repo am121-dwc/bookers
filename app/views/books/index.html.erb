@@ -2,12 +2,18 @@
 
 <% @books.each do |book| %>
   <p>Title</p>
-  <span><%= link_to book.title, book_path(book) %></span>
+  <span><%= book.title %></span>
 
   <p>Body</p>
   <span><%= book.body %></span>
 
 
+  <%= link_to "Show", book_path(book) %>
+  <%= link_to "Edit", edit_book_path(book) %>
+  <%= link_to "Destroy", book_path(book), method: :delete, "data-confirm" => "Are you sure?" %>
 
+<% end %>
+
+  <%= form_with model: @book do |f| %>
 
 <% end %>
