@@ -58,3 +58,16 @@ td-text{
   color: #930403;
   border: solid 1px #930403;
 }
+
+.display{
+  display: flex;
+  margin: 30px;
+}
+
+.show-t{
+  font-weight: bold;
+}
+
+.show-text{
+  font-size: 14px;
+}

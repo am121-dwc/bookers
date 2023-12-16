@@ -21,10 +21,10 @@ class BooksController < ApplicationController
     book = Book.new(book_params)
     if book.save
       flash[:notice] = "Create book is successfully."
-      redirect_to book_path(@book.id)
+      redirect_to book_path(book)
     else
-      flash[:alert] = "Book was not created. Both title and body required."
-      redirect_to book
+      flash[:alert] = "Error. Book was not created. Both title and body required."
+      redirect_to '/books'
     end
   end
 
@@ -34,7 +34,7 @@ class BooksController < ApplicationController
        flash[:notice] = "Book change is successfully."
        redirect_to book_path
     else
-       flash[:alert] = "Book was not updated. Both title and body required."
+       flash[:alert] = "Error. Book was not updated. Both title and body required."
        redirect_to book_path
     end
   end
@@ -45,7 +45,7 @@ class BooksController < ApplicationController
       flash[:notice] = "Delete Book is successfully."
       redirect_to books_path
     else
-      flash.now[:alert] = "book was not destroyed."
+      flash.now[:alert] = "Error. Book was not destroyed."
       render book_path
     end
   end
