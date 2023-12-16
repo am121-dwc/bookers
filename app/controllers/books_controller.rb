@@ -23,7 +23,7 @@ class BooksController < ApplicationController
       flash[:notice] = "Create book is successfully."
       redirect_to book_path(book)
     else
-      flash[:alert] = "Error. Book was not created. Both title and body required."
+      flash[:alert] = "error. Book was not created. Title and body can't be blank."
       redirect_to '/books'
     end
   end
@@ -34,7 +34,7 @@ class BooksController < ApplicationController
        flash[:notice] = "Book change is successfully."
        redirect_to book_path
     else
-       flash[:alert] = "Error. Book was not updated. Both title and body required."
+       flash[:alert] = "error. Book was not updated. Title and body can't be blank."
        redirect_to book_path
     end
   end
@@ -45,7 +45,7 @@ class BooksController < ApplicationController
       flash[:notice] = "Delete Book is successfully."
       redirect_to books_path
     else
-      flash.now[:alert] = "Error. Book was not destroyed."
+      flash.now[:alert] = "error. Book was not destroyed."
       render book_path
     end
   end

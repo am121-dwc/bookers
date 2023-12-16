@@ -15,7 +15,7 @@
  *= require_self
  */
 
-/* bodyとmarginの幅に関しては書体の指定はソースコードを(要件とみなし)見て写しました */
+/* top画面のbodyとmarginの幅と書体の指定はソースコードを(要件とみなし)見ました */
 
 body{
   margin: 33px;
@@ -70,4 +70,8 @@ td-text{
 
 .show-text{
   font-size: 14px;
+}
+
+.link{
+  margin-left: 33px
 }
