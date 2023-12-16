@@ -14,6 +14,9 @@
  *= require_tree .
  *= require_self
  */
+
+/* bodyとmarginの幅に関しては書体の指定はソースコードを(要件とみなし)見て写しました */
+
 body{
   margin: 33px;
   background-color: #fff;
@@ -26,4 +29,32 @@ body{
 
 p{
   margin: 33px;
+}
+/* ここまでです */
+
+.tab{
+  white-space: nowrap;
+}
+
+td-text{
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.flash-message{
+  border-radius: 5px;
+  padding: 16px 24px;
+  margin: 16px 0px;
+}
+
+.flash-message.notice{
+  background-color: #bcdfff;
+  color: #0067C0;
+  border: solid 1px #0067C0;
+}
+
+.flash-message.alert{
+  background-color: #ffd4d1;
+  color: #930403;
+  border: solid 1px #930403;
 }
